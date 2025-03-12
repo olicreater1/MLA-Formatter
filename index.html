@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLA Formatter Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MLA Formatter Input</h1>
+        <form action="/generate" method="post">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="professorName">Professor Name</label>
+            <input type="text" id="professorName" name="professorName" required>
+
+            <label for="courseName">Course Name</label>
+            <input type="text" id="courseName" name="courseName" required>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="content">Content</label>
+            <textarea id="content" name="content" rows="10" required></textarea>
+
+            <button type="submit">Generate PDF</button>
+        </form>
+    </div>
+</body>
+</html>
